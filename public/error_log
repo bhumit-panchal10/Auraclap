@@ -1,0 +1,185 @@
+[16-May-2025 05:49:28 UTC] PHP Warning:  require(/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 15
+[16-May-2025 05:49:28 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 15
+[16-May-2025 05:50:17 UTC] PHP Warning:  require(/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 16
+[16-May-2025 05:50:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 16
+[16-May-2025 05:51:36 UTC] PHP Warning:  require(/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 16
+[16-May-2025 05:51:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 16
+[16-May-2025 05:52:36 UTC] PHP Warning:  require(/home3/aurac4pp/public_html/..Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 15
+[16-May-2025 05:52:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/..Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 15
+[16-May-2025 05:55:43 UTC] PHP Warning:  require(/home3/aurac4pp/public_html/..Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 15
+[16-May-2025 05:55:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/..Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 15
+[16-May-2025 05:56:25 UTC] PHP Warning:  require(/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 16
+[16-May-2025 05:56:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 16
+[16-May-2025 05:57:01 UTC] PHP Warning:  require(/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 16
+[16-May-2025 05:57:01 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 16
+[16-May-2025 05:57:26 UTC] PHP Warning:  require_once(/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 05:57:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 05:57:52 UTC] PHP Warning:  require_once(/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 05:57:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 05:58:35 UTC] PHP Warning:  require_once(/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 05:58:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 05:58:48 UTC] PHP Warning:  require_once(/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 05:58:48 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 05:58:52 UTC] PHP Warning:  require_once(/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php): Failed to open stream: No such file or directory in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 05:58:52 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/public_html/../../Auraclap/bootstrap/app.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/public_html/index.php:20
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/public_html/index.php on line 20
+[16-May-2025 14:39:59 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Http\Controllers\Api\CustomerApiController::ongoingorder() in /home3/aurac4pp/Auraclap/app/Http/Controllers/Api/CustomerApiController.php on line 654
+[16-May-2025 14:40:19 Asia/Calcutta] PHP Fatal error:  Cannot redeclare App\Http\Controllers\Api\CustomerApiController::ongoingorder() in /home3/aurac4pp/Auraclap/app/Http/Controllers/Api/CustomerApiController.php on line 654
+[11-Jul-2025 18:35:24 Asia/Calcutta] PHP Fatal error:  Cannot use App\Models\VideoMaster as VideoMaster because the name is already in use in /home3/aurac4pp/Auraclap/app/Http/Controllers/Api/TechnicialApiController.php on line 34
+[11-Jul-2025 18:35:52 Asia/Calcutta] PHP Fatal error:  Cannot use App\Models\VideoMaster as VideoMaster because the name is already in use in /home3/aurac4pp/Auraclap/app/Http/Controllers/Api/TechnicialApiController.php on line 34
+[11-Jul-2025 18:36:48 Asia/Calcutta] PHP Fatal error:  Cannot use App\Models\VideoMaster as VideoMaster because the name is already in use in /home3/aurac4pp/Auraclap/app/Http/Controllers/Api/TechnicialApiController.php on line 34
+[14-Jul-2025 06:15:32 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:15:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:15:36 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:15:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:15:39 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:15:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:16:11 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:16:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:16:24 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:16:24 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:16:31 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:16:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:16:46 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:16:46 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:09 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:09 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:10 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:10 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:10 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:10 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:11 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:17:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:18:35 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:18:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:18:35 UTC] PHP Warning:  require(/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php): Failed to open stream: No such file or directory in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[14-Jul-2025 06:18:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home3/aurac4pp/admin.auraclap.com/../Auraclap/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home3/aurac4pp/admin.auraclap.com/index.php:16
+Stack trace:
+#0 {main}
+  thrown in /home3/aurac4pp/admin.auraclap.com/index.php on line 16
+[28-Aug-2025 16:23:11 Asia/Calcutta] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home3/aurac4pp/Auraclap/app/Http/Controllers/Api/TechnicialApiController.php on line 1018
+[28-Aug-2025 16:23:56 Asia/Calcutta] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home3/aurac4pp/Auraclap/app/Http/Controllers/Api/TechnicialApiController.php on line 1018
+[28-Aug-2025 16:27:10 Asia/Calcutta] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home3/aurac4pp/Auraclap/app/Http/Controllers/Api/TechnicialApiController.php on line 1018
+[28-Aug-2025 16:29:49 Asia/Calcutta] PHP Fatal error:  'continue' not in the 'loop' or 'switch' context in /home3/aurac4pp/Auraclap/app/Http/Controllers/Api/TechnicialApiController.php on line 1018
+[30-Aug-2025 19:05:22 Asia/Calcutta] PHP Fatal error:  Cannot declare class App\Http\Controllers\Admin\MetaDataController, because the name is already in use in /home3/aurac4pp/Auraclap/app/Http/Controllers/MetaDataController.php on line 7
