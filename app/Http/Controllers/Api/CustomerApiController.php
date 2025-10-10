@@ -128,10 +128,10 @@ class CustomerApiController extends PushNotificationController
     public function category_subcategory()
     {
 
-
-        $baseCategoryImgUrl = 'http://admin.auraclap.com/upload/category-image/';
-        $baseSubCategoryImgUrl = 'http://admin.auraclap.com/upload/subcategory-images/';
-        $baseratcardImgUrl = 'http://admin.auraclap.com/upload/RateCardPdf/';
+        $baseCategoryImgUrl   = asset('/upload/category-image/');
+        
+        $baseSubCategoryImgUrl = asset('/upload/subcategory-images/');
+        $baseratcardImgUrl     = asset('/upload/RateCardPdf/');
 
         $categories = Categories::with([
 
@@ -150,15 +150,15 @@ class CustomerApiController extends PushNotificationController
             ->get();
 
         $categories->transform(function ($category) use ($baseCategoryImgUrl, $baseSubCategoryImgUrl, $baseratcardImgUrl) {
-            $category->Categories_img = $category->Categories_img ? $baseCategoryImgUrl . $category->Categories_img : null;
-            $category->ratecard_pdf = $category->ratecard_pdf ? $baseratcardImgUrl . $category->ratecard_pdf : null;
+            $category->Categories_img = $category->Categories_img ? $baseCategoryImgUrl . '/'.$category->Categories_img : null;
+            $category->ratecard_pdf = $category->ratecard_pdf ? $baseratcardImgUrl . '/'.$category->ratecard_pdf : null;
 
 
 
             // Transform subcategories
             if ($category->subcategories) {
                 $category->subcategories->transform(function ($sub) use ($baseSubCategoryImgUrl) {
-                    $sub->SubCategories_img = $sub->SubCategories_img ? $baseSubCategoryImgUrl . $sub->SubCategories_img : null;
+                    $sub->SubCategories_img = $sub->SubCategories_img ? $baseSubCategoryImgUrl . '/'.$sub->SubCategories_img : null;
 
                     // Transform subcategory rates
                     if ($sub->rates) {
@@ -417,7 +417,7 @@ class CustomerApiController extends PushNotificationController
                 "amount" => $catsubdetail->amount,
                 "strCategoryName" => $subcategory->strCategoryName,
                 "strSubCategoryName" => $subcategory->strSubCategoryName,
-                "SubCategories_img" => "http://admin.auraclap.com/upload/subcategory-images/{$subcategory->SubCategories_img}",
+                "SubCategories_img" => asset('upload/subcategory-images/' . $subcategory->SubCategories_img),
                 "is_cart" => $is_cart,
                 "category" => [
                     "meta_keyword" => $category->meta_keyword,
@@ -1014,23 +1014,23 @@ class CustomerApiController extends PushNotificationController
             // Add full image URL
             $categories->each(function ($category) {
                 $category->Categories_img = $category->Categories_img
-                    ? "http://admin.auraclap.com/upload/category-image/{$category->Categories_img}"
+                ? asset('upload/category-image/' . $category->Categories_img)
                     : null;
 
                 $category->home_cate_image = $category->home_cate_image
-                    ? "http://admin.auraclap.com/upload/Home-category-image/{$category->home_cate_image}"
+                ? asset('upload/Home-category-image/' . $category->home_cate_image)
                     : null;
 
                 $category->ratecard_pdf = $category->ratecard_pdf
-                    ? "http://admin.auraclap.com/upload/RateCardPdf/{$category->ratecard_pdf}"
+                ? asset('upload/RateCardPdf/' . $category->ratecard_pdf)
                     : null;
 
                 $category->carousel_image = $category->carousel_image
-                    ? "http://admin.auraclap.com/upload/carousel-icon/{$category->carousel_image}"
+                ? asset('upload/carousel-icon/' . $category->carousel_image)
                     : null;
 
                 $category->Categories_icon = $category->Categories_icon
-                    ? "http://admin.auraclap.com/upload/category-icon/{$category->Categories_icon}"
+                ? asset('upload/category-icon/' . $category->Categories_icon)
                     : null;
             });
 
@@ -1059,7 +1059,7 @@ class CustomerApiController extends PushNotificationController
                 // Transform each category to include the full image URL
                 $Sliders = $Sliders->map(function ($Slider) {
                     $Slider->image = $Slider->image
-                        ? "http://admin.auraclap.com/upload/Slider-images/" . $Slider->image
+                        ? asset('upload/Slider-images/' . $Slider->image)
                         : null;
                     return $Slider;
                 });
@@ -1092,7 +1092,7 @@ class CustomerApiController extends PushNotificationController
                 // Transform each category to include the full image URL
                 $Sliders = $Sliders->map(function ($Slider) {
                     $Slider->image = $Slider->image
-                        ? "http://admin.auraclap.com/upload/TechnicialSlider-images/" . $Slider->image
+                        ? asset('upload/TechnicialSlider-images/' . $Slider->image)
                         : null;
                     return $Slider;
                 });
@@ -1252,7 +1252,8 @@ class CustomerApiController extends PushNotificationController
                         return [
                             'iSubCategoryId'   => $sub->iSubCategoryId,
                             'strSubCategoryName' => $sub->strSubCategoryName,
-                            'SubCategories_img'  => "http://admin.auraclap.com/upload/subcategory-images/{$sub->SubCategories_img}",
+                            'SubCategories_img' => asset('upload/subcategory-images/' . $sub->SubCategories_img),
+
                         ];
                     }),
                     'rates' => $category->rates->map(function ($rate) use ($subcategoryid) {
@@ -1272,7 +1273,7 @@ class CustomerApiController extends PushNotificationController
                             'subcategory'  => $rate->subcategory ? [
                                 'iSubCategoryId'   => $rate->subcategory->iSubCategoryId ?? '',
                                 'strSubCategoryName' => $rate->subcategory->strSubCategoryName ?? '',
-                                'SubCategories_img'  => "http://admin.auraclap.com/upload/subcategory-images/{$rate->subcategory->SubCategories_img}",
+                                'SubCategories_img' => asset('upload/subcategory-images/' . $rate->subcategory->SubCategories_img),
                             ] : null,
                         ];
                     }),
@@ -1601,22 +1602,22 @@ class CustomerApiController extends PushNotificationController
                                     'mobile_no'        => $tech->mobile_no,
                                     'city'             => $tech->city,
                                     'Technicial_image' => $tech->Technicial_image
-                                        ? 'http://admin.auraclap.com/upload/Technicial/' . $tech->Technicial_image
+                                    ? asset('upload/Technicial/' . $tech->Technicial_image)
                                         : null,
                                 ] : null,
                                 'technician_avg_rating' => $avgByCustomer !== null ? $avgByCustomer : null,
 
                                 // order-level photos derived from details (optional)
                                 'service_photo_1' => $firstDetail?->service_photo_1
-                                    ? 'http://admin.auraclap.com/upload/servicephoto1/' . $firstDetail->service_photo_1
+                                    ? asset('upload/servicephoto1/' . $firstDetail->service_photo_1)
                                     : null,
                                 'service_photo_2' => $firstDetail?->service_photo_2
-                                    ? 'http://admin.auraclap.com/upload/servicephoto2/' . $firstDetail->service_photo_2
+                                    ? asset('upload/servicephoto2/' . $firstDetail->service_photo_2)
                                     : null,
 
                                 'Category_name'   => $cat->Category_name ?? null,
                                 'Categories_img'  => ($cat && $cat->Categories_img)
-                                    ? 'http://admin.auraclap.com/upload/category-image/' . $cat->Categories_img
+                                    ? asset('upload/category-image/' . $cat->Categories_img)
                                     : null,
 
                                 // ORDER DETAILS
@@ -1634,7 +1635,7 @@ class CustomerApiController extends PushNotificationController
                                         'amount'             => $d->amount,
                                         'strSubCategoryName' => $sub->strSubCategoryName ?? null,
                                         'SubCategories_img'  => ($sub && $sub->SubCategories_img)
-                                            ? 'http://admin.auraclap.com/upload/subcategory-images/' . $sub->SubCategories_img
+                                            ? asset('upload/subcategory-images/' . $sub->SubCategories_img)
                                             : null,
                                     ];
                                 })->values(),
@@ -1903,22 +1904,22 @@ class CustomerApiController extends PushNotificationController
                                     'mobile_no'        => $tech->mobile_no,
                                     'city'             => $tech->city,
                                     'Technicial_image' => $tech->Technicial_image
-                                        ? 'http://admin.auraclap.com/upload/Technicial/' . $tech->Technicial_image
+                                    ? asset('upload/Technicial/' . $tech->Technicial_image)
                                         : null,
                                 ] : null,
                                 'technician_avg_rating' => $avgByCustomer !== null ? round($avgByCustomer, 1) : null,
 
                                 // derived photos
                                 'service_photo_1' => $o?->service_photo_1
-                                    ? 'http://admin.auraclap.com/upload/servicephoto1/' . $o->service_photo_1
+                                    ? asset('upload/servicephoto1/' . $o->service_photo_1)
                                     : null,
                                 'service_photo_2' => $o?->service_photo_2
-                                    ? 'http://admin.auraclap.com/upload/servicephoto2/' . $o->service_photo_2
+                                    ? asset('upload/servicephoto2/' . $o->service_photo_2)
                                     : null,
 
                                 'Category_name'   => $cat->Category_name ?? null,
                                 'Categories_img'  => ($cat && $cat->Categories_img)
-                                    ? 'http://admin.auraclap.com/upload/category-image/' . $cat->Categories_img
+                                    ? asset('upload/category-image/' . $cat->Categories_img)
                                     : null,
 
                                 'orderdetail' => $o->orderdetail->map(function ($d) {
@@ -1935,7 +1936,7 @@ class CustomerApiController extends PushNotificationController
                                         'amount'             => $d->amount,
                                         'strSubCategoryName' => $sub->strSubCategoryName ?? null,
                                         'SubCategories_img'  => ($sub && $sub->SubCategories_img)
-                                            ? 'http://admin.auraclap.com/upload/subcategory-images/' . $sub->SubCategories_img
+                                            ? asset('upload/subcategory-images/' . $sub->SubCategories_img)
                                             : null,
                                     ];
                                 })->values(),
@@ -2183,21 +2184,21 @@ class CustomerApiController extends PushNotificationController
                                     'mobile_no'        => $tech->mobile_no,
                                     'city'             => $tech->city,
                                     'Technicial_image' => $tech->Technicial_image
-                                        ? 'http://admin.auraclap.com/upload/Technicial/' . $tech->Technicial_image
+                                    ? asset('upload/Technicial/' . $tech->Technicial_image)
                                         : null,
                                 ] : null,
                                 'technician_avg_rating' => $avgByCustomer !== null ? round($avgByCustomer, 1) : null,
 
                                 'service_photo_1' => $o?->service_photo_1
-                                    ? 'http://admin.auraclap.com/upload/servicephoto1/' . $o->service_photo_1
+                                    ? asset('upload/servicephoto1/' . $o->service_photo_1)
                                     : null,
                                 'service_photo_2' => $o?->service_photo_2
-                                    ? 'http://admin.auraclap.com/upload/servicephoto2/' . $o->service_photo_2
+                                    ? asset('upload/servicephoto2/' . $o->service_photo_2)
                                     : null,
 
                                 'Category_name'   => $cat->Category_name ?? null,
                                 'Categories_img'  => ($cat && $cat->Categories_img)
-                                    ? 'http://admin.auraclap.com/upload/category-image/' . $cat->Categories_img
+                                    ? asset('upload/category-image/' . $cat->Categories_img)
                                     : null,
 
                                 'orderdetail' => $o->orderdetail->map(function ($d) {
@@ -2214,7 +2215,7 @@ class CustomerApiController extends PushNotificationController
                                         'amount'             => $d->amount,
                                         'strSubCategoryName' => $sub->strSubCategoryName ?? null,
                                         'SubCategories_img'  => ($sub && $sub->SubCategories_img)
-                                            ? 'http://admin.auraclap.com/upload/subcategory-images/' . $sub->SubCategories_img
+                                            ? asset('upload/subcategory-images/' . $sub->SubCategories_img)
                                             : null,
                                     ];
                                 })->values(),
@@ -2527,22 +2528,22 @@ class CustomerApiController extends PushNotificationController
                                     'mobile_no'        => $tech->mobile_no,
                                     'city'             => $tech->city,
                                     'Technicial_image' => $tech->Technicial_image
-                                        ? 'http://admin.auraclap.com/upload/Technicial/' . $tech->Technicial_image
+                                    ? asset('upload/Technicial/' . $tech->Technicial_image)
                                         : null,
                                 ] : null,
                                 'technician_avg_rating' => $avgByCustomer !== null ? round($avgByCustomer, 1) : null,
 
                                 // derived photos (optional)
                                 'service_photo_1' => $firstDetail?->service_photo_1
-                                    ? 'http://admin.auraclap.com/upload/servicephoto1/' . $firstDetail->service_photo_1
+                                    ? asset('upload/servicephoto1/' . $firstDetail->service_photo_1)
                                     : null,
                                 'service_photo_2' => $firstDetail?->service_photo_2
-                                    ? 'http://admin.auraclap.com/upload/servicephoto2/' . $firstDetail->service_photo_2
+                                    ? asset('upload/servicephoto2/' . $firstDetail->service_photo_2)
                                     : null,
 
                                 'Category_name'   => $cat->Category_name ?? null,
                                 'Categories_img'  => ($cat && $cat->Categories_img)
-                                    ? 'http://admin.auraclap.com/upload/category-image/' . $cat->Categories_img
+                                    ? asset('upload/category-image/' . $cat->Categories_img)
                                     : null,
 
                                 'orderdetail' => $o->orderdetail->map(function ($d) {
@@ -2559,7 +2560,7 @@ class CustomerApiController extends PushNotificationController
                                         'amount'             => $d->amount,
                                         'strSubCategoryName' => $sub->strSubCategoryName ?? null,
                                         'SubCategories_img'  => ($sub && $sub->SubCategories_img)
-                                            ? 'http://admin.auraclap.com/upload/subcategory-images/' . $sub->SubCategories_img
+                                            ? asset('upload/subcategory-images/' . $sub->SubCategories_img)
                                             : null,
                                     ];
                                 })->values(),
@@ -2638,7 +2639,8 @@ class CustomerApiController extends PushNotificationController
 
                 $pdf->save($pdfPath);
 
-                $pdfUrl = 'http://admin.auraclap.com/upload/' . $filename;
+
+                $pdfUrl = asset('upload/' . $filename);
 
                 return response()->json([
                     'message' => 'Invoice generated successfully',
@@ -2773,7 +2775,7 @@ class CustomerApiController extends PushNotificationController
                             "iSubCategoryId" => $subcategories->iSubCategoryId,
                             "strCategoryName" => optional($subcategories->category)->Category_name,
                             "strSubCategoryName" => $subcategories->strSubCategoryName,
-                            "SubCategories_img" => "http://admin.auraclap.com/upload/subcategory-images/{$subcategories->SubCategories_img}",
+                            "SubCategories_img" => asset('upload/subcategory-images/' . $subcategories->SubCategories_img),
                         ] : null,
                     ];
 

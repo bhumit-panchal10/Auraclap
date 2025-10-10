@@ -98,11 +98,12 @@ class FrontCustomerApiController extends Controller
     ]);
 
     try {
-        $baseCategoryImgUrl   = 'http://admin.auraclap.com/upload/category-image/';
-        $baseSubCategoryImgUrl = 'http://admin.auraclap.com/upload/subcategory-images/';
-        $baseratcardImgUrl     = 'http://admin.auraclap.com/upload/RateCardPdf/';
-        $basecarouseliconUrl     = 'http://admin.auraclap.com/upload/carousel-icon/';
-        $baseCategoryiconUrl     = 'http://admin.auraclap.com/upload/category-icon/';
+        $baseCategoryImgUrl   = asset('/upload/category-image/');
+        
+        $baseSubCategoryImgUrl = asset('/upload/subcategory-images/');
+        $baseratcardImgUrl     = asset('/upload/RateCardPdf/');
+        $basecarouseliconUrl     = asset('/upload/carousel-icon/');
+        $baseCategoryiconUrl     = asset('/upload/category-icon/');
 
         // $category = Categories::with([
         //     'subcategories' => function ($q) {
@@ -155,19 +156,19 @@ class FrontCustomerApiController extends Controller
 
         // 2) Transform the single category node
         $category->Categories_img = $category->Categories_img
-            ? $baseCategoryImgUrl . $category->Categories_img
+            ?  $baseCategoryImgUrl.'/'  . $category->Categories_img
             : null;
 
         $category->ratecard_pdf = $category->ratecard_pdf
-            ? $baseratcardImgUrl . $category->ratecard_pdf
+            ? $baseratcardImgUrl.'/' . $category->ratecard_pdf
             : null;
             
         $category->carousel_image = $category->carousel_image
-            ? $basecarouseliconUrl . $category->carousel_image
+            ? $basecarouseliconUrl.'/' . $category->carousel_image
             : null;
             
         $category->Categories_icon = $category->Categories_icon
-            ? $baseCategoryiconUrl . $category->Categories_icon
+            ? $baseCategoryiconUrl.'/' . $category->Categories_icon
             : null;
 
         $hasRates = false; // flag to check if any city-wise rate exists
@@ -175,7 +176,7 @@ class FrontCustomerApiController extends Controller
         if ($category->subcategories) {
             $category->subcategories->transform(function ($sub) use ($baseSubCategoryImgUrl, &$hasRates) {
                 $sub->SubCategories_img = $sub->SubCategories_img
-                    ? $baseSubCategoryImgUrl . $sub->SubCategories_img
+                    ? $baseSubCategoryImgUrl.'/' . $sub->SubCategories_img
                     : null;
 
                 if ($sub->rates && $sub->rates->count() > 0) {

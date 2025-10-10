@@ -1084,12 +1084,13 @@ class TechnicialApiController extends PushNotificationController
                 // normalize order-level service photos
                 $service_photo_1 = $order->service_photo_1;
                 $service_photo_2 = $order->service_photo_2;
-                if (!empty($service_photo_1) && !Str::startsWith($service_photo_1, ['http://','https://'])) {
-                    $service_photo_1 = "https://admin.auraclap.com/upload/servicephoto1/" . $service_photo_1;
+                if (!empty($service_photo_1) && !Str::startsWith($service_photo_1, ['http://', 'https://'])) {
+                    $service_photo_1 = asset('upload/servicephoto1/' . $service_photo_1);
                 }
-                if (!empty($service_photo_2) && !Str::startsWith($service_photo_2, ['http://','https://'])) {
-                    $service_photo_2 = "https://admin.auraclap.com/upload/servicephoto2/" . $service_photo_2;
+                if (!empty($service_photo_2) && !Str::startsWith($service_photo_2, ['http://', 'https://'])) {
+                    $service_photo_2 = asset('upload/servicephoto2/' . $service_photo_2);
                 }
+
                 
                  $flaggedDetails = $order->orderdetail->filter(function ($d) {
                     return (int)($d->technicial_add_extra_service ?? 0) === 1;
@@ -1142,11 +1143,11 @@ class TechnicialApiController extends PushNotificationController
                         // normalize subcategory & category images
                         $sub_img = $detail->subcategory->SubCategories_img ?? null;
                         if (!empty($sub_img) && !Str::startsWith($sub_img, ['http://','https://'])) {
-                            $sub_img = "https://admin.auraclap.com/upload/subcategory-images/" . $sub_img;
+                            $sub_img = asset('upload/subcategory-images/'. $sub_img) ;
                         }
                         $cat_img = $detail->category->Categories_img ?? null;
                         if (!empty($cat_img) && !Str::startsWith($cat_img, ['http://','https://'])) {
-                            $cat_img = "https://admin.auraclap.com/upload/category-image/" . $cat_img;
+                            $cat_img = asset('upload/category-image/'. $cat_img);
                         }
     
                         return [
