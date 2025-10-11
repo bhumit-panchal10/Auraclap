@@ -974,7 +974,7 @@ class FrontCustomerApiController extends Controller
                     "slugname" => $ourTeam->slugname,
                     "blogDescription" => $ourTeam->blogDescription,
                     "blogDate" => $ourTeam->blogDate,
-                    "blogImage" => "https://admin.auraclap.com/upload/Blog/" . $ourTeam->blogImage
+                    "blogImage" => asset('upload/Blog/'. $ourTeam->blogImage)
                 );
             }
            
@@ -1014,7 +1014,7 @@ class FrontCustomerApiController extends Controller
                 "metaDescription" => $blog->metaDescription,
                 "head" => $blog->head,
                 "body" => $blog->body,
-                "blogImage" => "https://admin.auraclap.com/upload/Blog/" . $blog->blogImage
+                "blogImage" => asset('upload/Blog/'. $blog->blogImage)
             );
            
             return response()->json([
