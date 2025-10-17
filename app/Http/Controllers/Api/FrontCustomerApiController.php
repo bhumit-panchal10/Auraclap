@@ -904,22 +904,22 @@ class FrontCustomerApiController extends Controller
                                     'mobile_no'        => $tech->mobile_no,
                                     'city'             => $tech->city,
                                     'Technicial_image' => $tech->Technicial_image
-                                        ? 'http://admin.auraclap.com/upload/Technicial/' . $tech->Technicial_image
+                                        ? asset('upload/Technicial/' . $tech->Technicial_image)
                                         : null,
                                 ] : null,
                                 'technician_avg_rating' => $avgByCustomer !== null ? $avgByCustomer : null,
 
                                 // order-level photos derived from details (optional)
                                 'service_photo_1' => $firstDetail?->service_photo_1
-                                    ? 'http://admin.auraclap.com/upload/servicephoto1/' . $firstDetail->service_photo_1
+                                    ? asset('upload/servicephoto1/' . $firstDetail->service_photo_1)
                                     : null,
                                 'service_photo_2' => $firstDetail?->service_photo_2
-                                    ? 'http://admin.auraclap.com/upload/servicephoto2/' . $firstDetail->service_photo_2
+                                    ? asset('upload/servicephoto2/' . $firstDetail->service_photo_2)
                                     : null,
 
                                 'Category_name'   => $cat->Category_name ?? null,
                                 'Categories_img'  => ($cat && $cat->Categories_img)
-                                    ? 'http://admin.auraclap.com/upload/category-image/' . $cat->Categories_img
+                                    ? asset('upload/category-image/' . $cat->Categories_img)
                                     : null,
 
                                 // ORDER DETAILS
@@ -937,7 +937,7 @@ class FrontCustomerApiController extends Controller
                                         'amount'             => $d->amount,
                                         'strSubCategoryName' => $sub->strSubCategoryName ?? null,
                                         'SubCategories_img'  => ($sub && $sub->SubCategories_img)
-                                            ? 'http://admin.auraclap.com/upload/subcategory-images/' . $sub->SubCategories_img
+                                            ? asset('upload/subcategory-images/' . $sub->SubCategories_img)
                                             : null,
                                     ];
                                 })->values(),
