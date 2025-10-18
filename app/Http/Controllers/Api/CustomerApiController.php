@@ -129,7 +129,7 @@ class CustomerApiController extends PushNotificationController
     {
 
         $baseCategoryImgUrl   = asset('/upload/category-image/');
-        
+
         $baseSubCategoryImgUrl = asset('/upload/subcategory-images/');
         $baseratcardImgUrl     = asset('/upload/RateCardPdf/');
 
@@ -150,15 +150,15 @@ class CustomerApiController extends PushNotificationController
             ->get();
 
         $categories->transform(function ($category) use ($baseCategoryImgUrl, $baseSubCategoryImgUrl, $baseratcardImgUrl) {
-            $category->Categories_img = $category->Categories_img ? $baseCategoryImgUrl . '/'.$category->Categories_img : null;
-            $category->ratecard_pdf = $category->ratecard_pdf ? $baseratcardImgUrl . '/'.$category->ratecard_pdf : null;
+            $category->Categories_img = $category->Categories_img ? $baseCategoryImgUrl . '/' . $category->Categories_img : null;
+            $category->ratecard_pdf = $category->ratecard_pdf ? $baseratcardImgUrl . '/' . $category->ratecard_pdf : null;
 
 
 
             // Transform subcategories
             if ($category->subcategories) {
                 $category->subcategories->transform(function ($sub) use ($baseSubCategoryImgUrl) {
-                    $sub->SubCategories_img = $sub->SubCategories_img ? $baseSubCategoryImgUrl . '/'.$sub->SubCategories_img : null;
+                    $sub->SubCategories_img = $sub->SubCategories_img ? $baseSubCategoryImgUrl . '/' . $sub->SubCategories_img : null;
 
                     // Transform subcategory rates
                     if ($sub->rates) {
@@ -1014,23 +1014,23 @@ class CustomerApiController extends PushNotificationController
             // Add full image URL
             $categories->each(function ($category) {
                 $category->Categories_img = $category->Categories_img
-                ? asset('upload/category-image/' . $category->Categories_img)
+                    ? asset('upload/category-image/' . $category->Categories_img)
                     : null;
 
                 $category->home_cate_image = $category->home_cate_image
-                ? asset('upload/Home-category-image/' . $category->home_cate_image)
+                    ? asset('upload/Home-category-image/' . $category->home_cate_image)
                     : null;
 
                 $category->ratecard_pdf = $category->ratecard_pdf
-                ? asset('upload/RateCardPdf/' . $category->ratecard_pdf)
+                    ? asset('upload/RateCardPdf/' . $category->ratecard_pdf)
                     : null;
 
                 $category->carousel_image = $category->carousel_image
-                ? asset('upload/carousel-icon/' . $category->carousel_image)
+                    ? asset('upload/carousel-icon/' . $category->carousel_image)
                     : null;
 
                 $category->Categories_icon = $category->Categories_icon
-                ? asset('upload/category-icon/' . $category->Categories_icon)
+                    ? asset('upload/category-icon/' . $category->Categories_icon)
                     : null;
             });
 
@@ -1499,12 +1499,12 @@ class CustomerApiController extends PushNotificationController
         $request->validate(['Customer_id' => 'required|integer']);
 
         try {
-            if (!Auth::guard('customerapi')->check()) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Customer is not authorized.',
-                ], 401);
-            }
+            // if (!Auth::guard('customerapi')->check()) {
+            //     return response()->json([
+            //         'success' => false,
+            //         'message' => 'Customer is not authorized.',
+            //     ], 401);
+            // }
 
             $primaryOrders = PrimaryOrder::query()
                 ->where('iCustomerId', $request->Customer_id)
@@ -1602,7 +1602,7 @@ class CustomerApiController extends PushNotificationController
                                     'mobile_no'        => $tech->mobile_no,
                                     'city'             => $tech->city,
                                     'Technicial_image' => $tech->Technicial_image
-                                    ? asset('upload/Technicial/' . $tech->Technicial_image)
+                                        ? asset('upload/Technicial/' . $tech->Technicial_image)
                                         : null,
                                 ] : null,
                                 'technician_avg_rating' => $avgByCustomer !== null ? $avgByCustomer : null,
@@ -1808,12 +1808,12 @@ class CustomerApiController extends PushNotificationController
         $request->validate(['Customer_id' => 'required|integer']);
 
         try {
-            if (!Auth::guard('customerapi')->check()) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Customer is not authorized.',
-                ], 401);
-            }
+            // if (!Auth::guard('customerapi')->check()) {
+            //     return response()->json([
+            //         'success' => false,
+            //         'message' => 'Customer is not authorized.',
+            //     ], 401);
+            // }
 
             // Primary as root:
             // - primary payment filter: isPayment in [0,1] (add payment_mode filter here too if needed)
@@ -1904,7 +1904,7 @@ class CustomerApiController extends PushNotificationController
                                     'mobile_no'        => $tech->mobile_no,
                                     'city'             => $tech->city,
                                     'Technicial_image' => $tech->Technicial_image
-                                    ? asset('upload/Technicial/' . $tech->Technicial_image)
+                                        ? asset('upload/Technicial/' . $tech->Technicial_image)
                                         : null,
                                 ] : null,
                                 'technician_avg_rating' => $avgByCustomer !== null ? round($avgByCustomer, 1) : null,
@@ -2092,12 +2092,12 @@ class CustomerApiController extends PushNotificationController
         $request->validate(['Customer_id' => 'required|integer']);
 
         try {
-            if (!Auth::guard('customerapi')->check()) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Customer is not authorized.',
-                ], 401);
-            }
+            // if (!Auth::guard('customerapi')->check()) {
+            //     return response()->json([
+            //         'success' => false,
+            //         'message' => 'Customer is not authorized.',
+            //     ], 401);
+            // }
 
             $primaryOrders = PrimaryOrder::query()
                 ->where('iCustomerId', $request->Customer_id)
@@ -2184,7 +2184,7 @@ class CustomerApiController extends PushNotificationController
                                     'mobile_no'        => $tech->mobile_no,
                                     'city'             => $tech->city,
                                     'Technicial_image' => $tech->Technicial_image
-                                    ? asset('upload/Technicial/' . $tech->Technicial_image)
+                                        ? asset('upload/Technicial/' . $tech->Technicial_image)
                                         : null,
                                 ] : null,
                                 'technician_avg_rating' => $avgByCustomer !== null ? round($avgByCustomer, 1) : null,
@@ -2234,7 +2234,7 @@ class CustomerApiController extends PushNotificationController
             return response()->json(['error' => $th->getMessage()], 500);
         }
     }
-    
+
     public function cancelorder(Request $request)
     {
         $request->validate([
@@ -2528,7 +2528,7 @@ class CustomerApiController extends PushNotificationController
                                     'mobile_no'        => $tech->mobile_no,
                                     'city'             => $tech->city,
                                     'Technicial_image' => $tech->Technicial_image
-                                    ? asset('upload/Technicial/' . $tech->Technicial_image)
+                                        ? asset('upload/Technicial/' . $tech->Technicial_image)
                                         : null,
                                 ] : null,
                                 'technician_avg_rating' => $avgByCustomer !== null ? round($avgByCustomer, 1) : null,
@@ -3649,7 +3649,6 @@ class CustomerApiController extends PushNotificationController
                         'isPayment' => 1
                     );
                     PrimaryOrder::where("primaryiOrderId", $request->order_id)->update($updateProfileData);
-                    
                 } elseif ($request->status == "Fail") {
 
                     $data = array(
