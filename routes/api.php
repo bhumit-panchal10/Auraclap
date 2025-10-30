@@ -63,7 +63,6 @@ Route::post('/customer-registration', [CustomerApiController::class, 'customer_n
 Route::post('/customerlogin', [CustomerApiController::class, 'login']);
 Route::post('/customer/RefreshfirebaseDeviceToken', [CustomerApiController::class, 'RefreshfirebaseDeviceToken'])->name('RefreshfirebaseDeviceToken');
 
-
 Route::post('/customerverifyOTP', [CustomerApiController::class, 'verifyOTP'])->name('verifyOTP');
 Route::post('/customer/category', [CustomerApiController::class, 'categories'])->name('categories');
 Route::post('/customer/HomeSliderImage', [CustomerApiController::class, 'HomeSliderImage'])->name('HomeSliderImage');

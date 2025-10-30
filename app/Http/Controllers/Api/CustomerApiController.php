@@ -997,8 +997,8 @@ class CustomerApiController extends PushNotificationController
                 "meta_head",
                 "meta_body"
 
-            );
-
+            )
+                ->where('iStatus', 1);
             // If search param exists, apply filter
             if ($request->has('Category_name') && !empty($request->Category_name)) {
                 $query->where('Category_name', 'LIKE', '%' . $request->Category_name . '%');
