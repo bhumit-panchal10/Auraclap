@@ -34,7 +34,7 @@ use App\Http\Controllers\BookingCancelController;
 use App\Http\Controllers\VideoListController;
 use App\Http\Controllers\MetaDataController;
 use App\Http\Controllers\BlogController;
-
+use App\Http\Controllers\ContactInquiryController;
 
 Route::get('/', function () {
     return view('auth.login');
@@ -189,7 +189,6 @@ Route::prefix('admin')->name('sub_categories.')->middleware('auth')->group(funct
     Route::delete('/sub_categories/deleteselected', [SubCategoriesController::class, 'deleteselected'])->name('deleteselected');
     Route::any('/sub_categories/updateStatus', [SubCategoriesController::class, 'updateStatus'])->name('updateStatus');
     Route::any('/sub_categories/service_subservice_mapping', [SubCategoriesController::class, 'service_subservice_mapping'])->name('service_subservice_mapping');
-
 });
 
 Route::prefix('admin')->name('howitworks.')->middleware('auth')->group(function () {
@@ -363,4 +362,10 @@ Route::prefix('/admin')->name('Recruitment.')->middleware('auth')->group(functio
     Route::delete('/Recruitment/delete', [RecruitmentController::class, 'delete'])->name('delete');
     Route::delete('/Recruitment/deleteselected', [RecruitmentController::class, 'deleteselected'])->name('deleteselected');
     Route::any('/Recruitment/updateStatus', [RecruitmentController::class, 'updateStatus'])->name('updateStatus');
+});
+
+Route::prefix('/admin')->name('ContactInquiry.')->middleware('auth')->group(function () {
+    Route::get('/ContactInquiry/index', [ContactInquiryController::class, 'index'])->name('index');
+    Route::delete('/ContactInquiry/delete', [ContactInquiryController::class, 'delete'])->name('delete');
+    Route::delete('/ContactInquiry/deleteselected', [ContactInquiryController::class, 'deleteselected'])->name('deleteselected');
 });
