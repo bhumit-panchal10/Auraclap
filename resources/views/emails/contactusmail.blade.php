@@ -10,5 +10,4 @@ $file = str_replace('#mobile', $data['Mobile'], $file);
 $file = str_replace('#message', $data['Message'], $file);
 
 echo $file;
-
 ?>
