@@ -34,10 +34,9 @@ use Google\Service\Monitoring\Custom;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use App\Models\BaseURL;
+use App\Models\Inquiry;
 use Razorpay\Api\Api;
 use Brian2694\Toastr\Facades\Toastr;
-
-
 
 class FrontCustomerApiController extends Controller
 
@@ -55,6 +54,12 @@ class FrontCustomerApiController extends Controller
             //$subject = $request->subject;
             $sendEmailDetails = DB::table('sendemaildetails')->where(['id' => 9])->first();
 
+            if (!$sendEmailDetails) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Email configuration not found.'
+                ], 404);
+            }
             $msg = [
                 'FromMail' => $sendEmailDetails->strFromMail,
                 'Title' => $sendEmailDetails->strTitle,
@@ -72,6 +77,14 @@ class FrontCustomerApiController extends Controller
                 'Message' => $messageContent,
                 //'Subject' => $subject
             ];
+            Inquiry::create([
+                'first_name' => $firstname,
+                'last_name' => $lastname,
+                'email' => $email,
+                'mobile' => $mobile,
+                'service' => $service,
+                'message' => $messageContent,
+            ]);
 
             Mail::send('emails.contactusmail', ['data' => $data], function ($message) use ($msg) {
                 $message->from($msg['FromMail'], $msg['Title']);
@@ -85,7 +98,10 @@ class FrontCustomerApiController extends Controller
             ], 200);
         } catch (\Throwable $th) {
             Toastr::error('Error: ' . $th->getMessage());
-            return redirect()->back()->withInput();
+            return response()->json([
+                'success' => false,
+                'message' => 'Mail sending failed: ' . $th->getMessage(),
+            ], 500);
         }
     }
 
